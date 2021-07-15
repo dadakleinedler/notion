@@ -35,15 +35,20 @@ body{
     weekday[4] = "Thursday";
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
+    
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
 
     var name = "Dada";
     var space = " ";
     
-    var today = new Date();
-    var hrs = today.getHours();
-    var dayOfWeek = weekday[today.getDay()];
+    var currentDate = new Date();
+    var hrs = currentDate.getHours();
+    var dayOfWeek = weekday[currentDate.getDay()];
+    const currentMonthNumber = currentDate.getMonth()
+    const currentMonthName = monthNames[currentMonthNumber]
     //var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
-    var date = dayOfWeek + space + today.getDate() + "." + (today.getMonth()+1) + '.'+ today.getFullYear()  ;
+    var date = dayOfWeek + space + currentDate.getDate() + "-" + currentMonthName + space + currentDate.getFullYear()  ;
 
     var greet;
 
