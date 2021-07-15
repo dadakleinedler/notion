@@ -37,11 +37,13 @@ body{
     weekday[6] = "Saturday";
 
     var name = "Dada";
+    var space = " ";
     
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    //var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    var date = dayOfWeek + space + today.getDate() + "." + (today.getMonth()+1) + '.'+ today.getFullYear()  ;
 
     var greet;
 
@@ -53,6 +55,6 @@ body{
         greet = 'Good Evening  ' + name;
 
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date}</div>`;
+        greet+=`<div id="date"> Today is ${date}</div>`;
 </script> 
 </html>
